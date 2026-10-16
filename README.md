@@ -10,9 +10,15 @@
 
 > This is a **simulated confidential-client engagement using official public/open data**. Client and stakeholder role labels describe a fictional engagement; do not claim a real external Mettelo customer, employment, endorsement or privileged data access. No raw data is uploaded by this specification update.
 
+## Business setting
+
+The simulated regional directorate coordinates attendance and inclusion support across local authorities. Its specialist team cannot give every area the same depth of review, so the next termly planning meeting must agree where to commission school-partner discussions and where an inclusion-policy review is more appropriate.
+
 ## Business problem
 
-Attendance-support requests compete for a limited review team. A high persistent-absence rate in a small population and a large absent-enrolment count in a larger authority create different workloads, but the directorate's separate phase and characteristics reports do not make that distinction easy to discuss. A single headline ranking can therefore obscure whether the next task is phase-wide support, a subgroup inclusion review or a check on data comparability.
+The Director of Education & Inclusion needs to allocate limited attendance-review capacity across competing local-authority requests. Current packs show overall absence, persistent absence and pupil characteristics in separate tables, leaving leaders to reconcile the evidence during the meeting. A large authority can dominate the workload by volume while a smaller authority faces a more severe rate; either signal can be missed when one league table drives the agenda.
+
+The practical consequence is an unclear support programme: officers may revisit a temporary spike while a persistent secondary-phase issue receives no named follow-up. The commission is to turn comparable published attendance evidence into a defensible termly review queue, with separate routes for phase-wide support, inclusion questions and data clarification.
 
 ## Commissioned decision
 
@@ -20,9 +26,13 @@ Attendance-support requests compete for a limited review team. A high persistent
 
 ## Practical use
 
-At the termly review, the Director selects an LA/secondary-phase signal, checks three comparable combined-term observations, then inspects FSM or SEN comparisons at the same available grain. If a subgroup cell is suppressed or not locally reported, the product opens an evidence request rather than assigning a local disparity. The Attendance Lead leaves with a review owner and a question for school partners, not a list of individual children.
+Before the termly meeting, the analyst prepares up to ten eligible LA/phase cases using comparable combined-term observations. During the meeting, the Head of Attendance Support compares a rate-first shortlist with a burden-first shortlist and opens the evidence for a secondary-phase case appearing in both. The SEND & Inclusion Lead checks whether any FSM/SEN disparity is actually available at the same local grain.
 
-The full [business context](project/BUSINESS_CONTEXT.md) names operational stakeholders, decisions, risks and proposed benefit measures.
+The Director records one of three actions: commission a phase attendance review, commission a separate inclusion-policy enquiry, or request data clarification. Each accepted case leaves with a role owner, a question for school partners and a next-term review date. Individual pupil referrals require school-held evidence beyond this project.
+
+**Management handover:** A termly attendance review pack with an LA/phase persistence table, a separate supported pupil-group comparison, two prioritisation views and an action register. Each case must show rate, affected-enrolment burden, eligible periods, reason for selection and the specific question the Attendance or Inclusion Lead must resolve.
+
+The full [business context](project/BUSINESS_CONTEXT.md) sets out stakeholders, decisions, evidence limits and proposed benefit measures.
 
 ## What must be delivered
 

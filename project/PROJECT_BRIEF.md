@@ -6,9 +6,17 @@ This is a **simulated confidential-client engagement using official public/open 
 
 ## Business problem and commission
 
-Attendance-support requests compete for a limited review team. A high persistent-absence rate in a small population and a large absent-enrolment count in a larger authority create different workloads, but the directorate's separate phase and characteristics reports do not make that distinction easy to discuss. A single headline ranking can therefore obscure whether the next task is phase-wide support, a subgroup inclusion review or a check on data comparability.
+The simulated regional directorate coordinates attendance and inclusion support across local authorities. Its specialist team cannot give every area the same depth of review, so the next termly planning meeting must agree where to commission school-partner discussions and where an inclusion-policy review is more appropriate.
+
+The Director of Education & Inclusion needs to allocate limited attendance-review capacity across competing local-authority requests. Current packs show overall absence, persistent absence and pupil characteristics in separate tables, leaving leaders to reconcile the evidence during the meeting. A large authority can dominate the workload by volume while a smaller authority faces a more severe rate; either signal can be missed when one league table drives the agenda.
+
+The practical consequence is an unclear support programme: officers may revisit a temporary spike while a persistent secondary-phase issue receives no named follow-up. The commission is to turn comparable published attendance evidence into a defensible termly review queue, with separate routes for phase-wide support, inclusion questions and data clarification.
 
 > Which local-authority and school-phase combinations warrant attendance-support investigation first, and which pupil-group disparities require a separate policy review?
+
+**Required management handover:** A termly attendance review pack with an LA/phase persistence table, a separate supported pupil-group comparison, two prioritisation views and an action register. Each case must show rate, affected-enrolment burden, eligible periods, reason for selection and the specific question the Attendance or Inclusion Lead must resolve.
+
+See [the management use case](BUSINESS_CONTEXT.md#practical-management-use-case) for how the review meeting uses this evidence.
 
 ## Core deliverable boundary
 

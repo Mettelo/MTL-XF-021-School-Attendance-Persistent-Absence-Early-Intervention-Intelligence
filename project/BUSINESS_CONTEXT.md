@@ -6,15 +6,19 @@
 
 This fictional directorate/board is an engagement scenario, not an assertion of a real client's circumstances. The source data remains official public/open data.
 
+## Business setting and immediate planning need
+
+The simulated regional directorate coordinates attendance and inclusion support across local authorities. Its specialist team cannot give every area the same depth of review, so the next termly planning meeting must agree where to commission school-partner discussions and where an inclusion-policy review is more appropriate.
+
 ## Business problem
 
-Attendance-support requests compete for a limited review team. A high persistent-absence rate in a small population and a large absent-enrolment count in a larger authority create different workloads, but the directorate's separate phase and characteristics reports do not make that distinction easy to discuss. A single headline ranking can therefore obscure whether the next task is phase-wide support, a subgroup inclusion review or a check on data comparability.
+The Director of Education & Inclusion needs to allocate limited attendance-review capacity across competing local-authority requests. Current packs show overall absence, persistent absence and pupil characteristics in separate tables, leaving leaders to reconcile the evidence during the meeting. A large authority can dominate the workload by volume while a smaller authority faces a more severe rate; either signal can be missed when one league table drives the agenda.
+
+The practical consequence is an unclear support programme: officers may revisit a temporary spike while a persistent secondary-phase issue receives no named follow-up. The commission is to turn comparable published attendance evidence into a defensible termly review queue, with separate routes for phase-wide support, inclusion questions and data clarification.
 
 ## Why the current process is insufficient
 
-The current scenario relies on separately prepared reports without a common source/metric contract. The material failure to prevent is specific: Combining period types, phases or overlapping characteristic groups would produce a plausible but invalid area ranking.
-
-This creates uncertainty over which cases need investigation and which comparisons should be rejected. No quantified loss, backlog, budget deficit or service failure is invented as a client fact.
+The Attendance Lead brings a volume list, the Inclusion Lead brings group-rate comparisons, and school-improvement colleagues ask which areas have a sustained issue. Without a shared period, population and decision record, the discussion must resolve conflicting rankings before it can assign work. A useful replacement shows rate, burden, persistence and coverage together and makes the reason for each proposed review explicit.
 
 ## Stakeholders and decisions
 
@@ -32,15 +36,15 @@ Which local-authority and school-phase combinations warrant attendance-support i
 
 ## Practical management use case
 
-At the termly review, the Director selects an LA/secondary-phase signal, checks three comparable combined-term observations, then inspects FSM or SEN comparisons at the same available grain. If a subgroup cell is suppressed or not locally reported, the product opens an evidence request rather than assigning a local disparity. The Attendance Lead leaves with a review owner and a question for school partners, not a list of individual children.
+Before the termly meeting, the analyst prepares up to ten eligible LA/phase cases using comparable combined-term observations. During the meeting, the Head of Attendance Support compares a rate-first shortlist with a burden-first shortlist and opens the evidence for a secondary-phase case appearing in both. The SEND & Inclusion Lead checks whether any FSM/SEN disparity is actually available at the same local grain.
+
+The Director records one of three actions: commission a phase attendance review, commission a separate inclusion-policy enquiry, or request data clarification. Each accepted case leaves with a role owner, a question for school partners and a next-term review date. Individual pupil referrals require school-held evidence beyond this project.
 
 ## Current-to-target workflow
 
-1. **Before review:** analyst registers the approved files, coverage and definitions; steward checks the cohort and unresolved exceptions.
-2. **At review:** Director of Education & Inclusion opens the overview, then inspects diagnostics and the underlying eligible population before considering a case.
-3. **Challenge:** the relevant stakeholder compares the alternative scenario and asks whether the signal survives missingness, comparability and denominator checks.
-4. **Action:** each accepted case records investigation type, responsible service role, missing evidence, next review and what finding would reverse the recommendation.
-5. **Follow-up:** the next termly attendance and inclusion review records evidence received and the decision, without claiming the analytical signal itself caused an improvement.
+**Target management handover:** A termly attendance review pack with an LA/phase persistence table, a separate supported pupil-group comparison, two prioritisation views and an action register. Each case must show rate, affected-enrolment burden, eligible periods, reason for selection and the specific question the Attendance or Inclusion Lead must resolve.
+
+The meeting's decision record must contain: the selected case and reporting period; the source-backed finding; the decision to investigate, watch, clarify or close; the responsible stakeholder role; the specific additional evidence requested; and the next review point. Add the evidence that would reverse or narrow the recommendation. A watchlist or no-action conclusion is valid when supported; do not fill the shortlist simply to reach ten cases.
 
 ## Required analytical response
 
@@ -56,7 +60,9 @@ At the termly review, the Director selects an LA/secondary-phase signal, checks 
 
 ## Proposed benefit monitoring
 
-At kickoff, record a baseline review process and propose measures for: time to regenerate the agreed evidence pack; proportion of agenda recommendations with a complete evidence chain; and proportion of accepted investigations with a role owner and next review. The target for recommendation traceability and ownership is 100%; regeneration time is measured during the independent rerun, with no fabricated pre-project baseline or claimed reduction. These are proposed management measures, not achieved service benefits.
+Measure the proportion of shortlisted LA/phase cases with comparable periods, an explicit selection reason and an Attendance or Inclusion owner; the target is 100%. In the simulated review, record whether changing from rate-first to burden-first changes the support agenda and why. Attendance improvement is a downstream service outcome requiring later school and intervention evidence.
+
+Record the preparation and review baseline at kickoff, then measure evidence-pack regeneration during the independent rerun. No pre-project time saving or achieved operational benefit is assumed. The eight-week engagement is assessed on the usability and traceability of the decision pack; later service outcomes require separate follow-up.
 
 ## Scope and evidence limits
 
