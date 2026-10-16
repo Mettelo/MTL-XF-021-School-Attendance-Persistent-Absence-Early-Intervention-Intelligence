@@ -4,7 +4,7 @@
 **Client:** Confidential Regional Education & Attendance Directorate  
 **Accountable simulated executive:** Director of Education & Inclusion  
 **Sector:** Education / Local Government  
-**Team:** 6–8 people · **Window:** 8 weeks  
+**Team:** 3–5 people · **Window:** 8 weeks  
 **Status:** documentation revised; file acquisition and cohort freeze pending  
 **Review cadence:** termly attendance and inclusion review
 
