@@ -1,56 +1,44 @@
-# MTL-XF-021 — Data workspace
+# MTL-XF-021 — Data workspace and support gate
 
-## Required sources and cohort
+## Core contract
 
-DfE Pupil Absence — geographic data + pupil-characteristics data. The latest release covers 2016/17–2025/26 and includes persistent absence, overall absence and reasons.
+England LA/phase attendance assessment using the two agreed DfE files. Main comparisons use autumn-and-spring combined windows, with recent persistence based on 2023/24, 2024/25 and 2025/26 where all are present. Retain earlier observations as context, with methodological breaks flagged. Compare FSM/SEN groups within supported local/phase cells; never combine overlapping characteristic families.
 
-Use both agreed DfE CSVs. Retain the published 2016/17–2025/26 coverage, then compare only matching reporting windows, school phases and geographic levels. Lock the actual release and available periods after inspecting metadata; a partial academic year must never be labelled a full year.
+## Optional work
 
-[Source register and exact URLs](SOURCE_REGISTER.md)
+School-level casework, pupil risk prediction and intervention-effect estimates are outside core. Additional single-term/full-year files require separate registration; they cannot be substituted into the combined-term series.
 
-**Current state:** specification only. No raw datasets have been downloaded or uploaded in this build. Expected size, row count and history statements from the earlier agreement require verification against the actual files. Do not mark the cohort frozen until the manifest and metadata are complete.
+## Acquisition state
 
-## Controlled acquisition and preparation
+No raw data is uploaded by this update. Official documentation checks are recorded in [SOURCE_REGISTER.md](SOURCE_REGISTER.md). File payloads, full schemas, bytes/checksums and final reuse/freeze approvals remain pending where stated. Keep publication-level evidence distinct from acquired-file evidence.
 
-1. Read [SOURCE_REGISTER.md](SOURCE_REGISTER.md); use the exact agreed URLs and official publisher documentation.
-2. Validate that the response is the expected CSV/ODS/XLSX/ZIP rather than an error page. Inspect archive contents and sheet names where relevant.
-3. Record resolved URL, UTC retrieval, release, coverage, filename, bytes, SHA-256 and licence evidence. Log discrepancies before changing sources.
-4. Preserve original bytes in an approved immutable snapshot; later upload only where instructed and redistribution is permitted.
-5. Record source fields, types, valid values, suppression, units and publisher methodology in [metadata](metadata/README.md).
-6. Implement the analytical grain below, verify keys/cardinality and account for excluded/quarantined records.
-7. Reconcile at least five published measures and create curated outputs reproducibly in the team repository.
+## Required source-to-deliverable matrix
 
-## Analytical grain
+Before analysis, create a row per headline measure/required comparison:
+
+`requirement_id | deliverable_id | metric | core_or_extension | source_id | actual_field_or_sheet | valid_grain | coverage | unit_denominator | metadata_evidence | support_status | owner | decision`
+
+Allowed support statuses: documentation-supported; payload-verified; unsupported; optional-not-activated. “Documentation-supported” alone is insufficient for a completed data freeze. If a mandatory field is absent, block its output and resolve the source or approved scope; do not fabricate values or silently waive the requirement.
+
+## Controlled preparation
+
+1. Use registered exact URLs and inspect actual content type, archive members or sheets.
+2. Record version, resolved URL, separate retrieval timestamps, bytes, SHA-256 and licence evidence.
+3. Approve the actual cohort and scope matrix at G1.
+4. Preserve original bytes; transform into curated facts with documented types, keys, hierarchies and joins.
+5. Account for retained/excluded/quarantined rows and quantify all mapping gaps.
+6. Reconcile five source values and execute [DT1–DT10](../project/ACCEPTANCE_CRITERIA.md).
+
+## Model and measures
 
 Geographic fact: reporting period × period coverage × geography level/code × school phase × other published breakdowns. Characteristics fact: period × available geography × phase × characteristic type/value. Keep the two facts separate unless their dimensional coverage supports an explicit join.
 
-## Required metric contract
+The core contract above controls conditional dimensions. Metric formulas have one authoritative home: [DELIVERABLES.md](../project/DELIVERABLES.md). Do not create another incompatible formula copy in the data README.
 
-| Metric | Required definition / calculation |
-| --- | --- |
-| Overall absence rate | 100 × absent sessions / possible sessions; calculate from counts only when both exist and agree with publisher definitions. |
-| Persistent absence rate | Use the publisher-defined percentage of enrolments missing at least 10% of possible sessions; retain its published denominator. |
-| Absence burden | Published absent-session or persistent-absence enrolment count, labelled with its distinct unit; never interchange sessions and pupils. |
-| Comparable-period change | Current rate minus previous matching-window rate, in percentage points. |
-| Group disparity | Characteristic-group rate minus an explicitly named comparator rate at compatible grain, in percentage points. |
-| Sustained-pressure flag | At least three comparable observations above a documented reference threshold; fewer observations produce insufficient history. |
-| Coverage | Eligible non-suppressed cells / expected cohort cells, with excluded periods and geographies listed. |
+## Data areas
 
-## Mandatory quality risks
+- [Raw snapshots](raw/README.md): unmodified source bytes only when later authorised and permitted.
+- [Reference data](reference/README.md): category/entity/period mappings with version and cardinality.
+- [Metadata](metadata/README.md): manifest, dictionary, methodology, lineage and support/freeze decisions.
 
-- Aggregate published statistics cannot identify individual pupils or establish why they are absent.
-- Do not join national characteristic rates onto local authorities as if locally measured.
-- Preserve suppression markers and pandemic/reporting discontinuities; do not convert suppressed cells to zero.
-
-1. Reproduce five published attendance measures across at least two phases and two comparable periods.
-2. Show that a partial-year record is excluded from a full-year comparison.
-3. Show that national characteristic rows cannot multiply local-authority counts in a join.
-4. Demonstrate that a suppressed cell remains unavailable in the dashboard and shortlist.
-
-## Folder ownership
-
-- [raw](raw/README.md): unmodified approved source snapshots; guidance only at present.
-- [reference](reference/README.md): governed code lists, hierarchies and crosswalks.
-- [metadata](metadata/README.md): source notices, schema, glossary, lineage and manifest evidence.
-
-Curated data, processing code, logs and test results belong in the team delivery repository. Preserve a reproducible boundary between source inputs and generated products. Do not add personal, confidential or paid-source data.
+**Specific control:** Combining period types, phases or overlapping characteristic groups would produce a plausible but invalid area ranking.

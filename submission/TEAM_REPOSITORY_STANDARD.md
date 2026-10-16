@@ -1,10 +1,10 @@
-# MTL-XF-021 — Mandatory team repository standard
+# MTL-XF-021 — Team repository standard
 
-## Ownership and setup
+## Ownership
 
-Create `MTL-XF-021-<team-name>` under the **Mettelo GitHub organisation**. Add every member using their own GitHub account. The team repository contains delivery evidence; this master remains the challenge specification. Record the master URL and reviewed specification commit in your README.
+Create `MTL-XF-021-<team-name>` under **Mettelo** and add every member through an individual GitHub account. Record this master URL, reviewed specification commit and final submission commit/tag. The master defines scope; the team repository contains delivery evidence.
 
-## Required structure
+## Required areas
 
 ```text
 README.md
@@ -33,34 +33,18 @@ deliverables/
 submission/FINAL_SUBMISSION.md
 ```
 
-Use the implementation folders relevant to your chosen free toolchain; explain unused folders. SQL and notebooks are alternatives where appropriate, not a requirement to duplicate logic. Record dependencies and setup versions. Supply accessible BI exports if interactive access is unavailable.
+Use implementation folders appropriate to the free toolchain; SQL/notebooks need not duplicate logic. Explain unused areas. Provide environment/dependency versions and a reviewable static dashboard export where interactive access is unavailable.
 
-## Project README requirements
+## Project README and evidence
 
-State Which local-authority and school-phase combinations warrant attendance-support investigation first, and which pupil-group disparities require a separate policy review? Include team/roles, frozen cohort, analytical grain, setup/run instructions, key outputs, five findings, shortlist/scenario links, limitations, quality/UAT status and submission version.
+State the decision, **Director of Education & Inclusion** as the simulated decision owner, approved cohort, core/extension status, run steps, five findings, scenario/shortlist links, limitations, UAT and independent rerun results. Link each D/AC/DT item to its actual artefact, owner, reviewer and state.
 
-## Collaboration and roles
+Responsibilities are defined once in [the project brief](../project/PROJECT_BRIEF.md). Assign named team owners and review partners. Use issues, meaningful commits, branches, PRs and reviews where practical. One member's bulk upload is insufficient evidence of multidisciplinary contribution. `CONTRIBUTIONS.md` links authored work, reviews and presentation/handover contribution for every member; commit count alone is insufficient.
 
-| Accountable role | Project responsibility and evidence |
-| --- | --- |
-| Business Analyst / Delivery Lead | Own the commissioned decision for Confidential Regional Education & Attendance Directorate; record at least eight prioritised requirements, each linked to a deliverable and test; maintain weekly scope and decision logs. |
-| Data Governance Analyst | Register every 021 input and critical field; approve the frozen cohort, licence evidence, glossary and 100% headline-KPI lineage before analysis. |
-| Data Engineer | Implement the stated 021 analytical grain, ingestion and exclusions; deliver a clean rerun with row-count/checksum evidence and no unexplained key duplicates. |
-| BI Developer | Build executive, diagnostic and quality views for the commissioned decision; reconcile at least five 021 dashboard measures and test every visible filter. |
-| Education / Attendance Analyst | Own phase and reporting-window comparability; review all seven KPI definitions and the three-period persistence results. |
-| Policy & Early Intervention Analyst | Write the up-to-ten-area investigation plan, naming support options, evidence gaps and a review owner for each. |
-| Education Assurance Analyst | Independently reconcile five source measures and execute the four attendance-specific edge cases. |
+## Project-specific acceptance
 
-Use issues for requirements/work packages, meaningful commits, branches, PRs and reviews where practical. A single bulk upload by one member is not sufficient collaboration evidence. `CONTRIBUTIONS.md` must link each member's artefacts, authored work, reviews, issues/PRs/commits and presentation/handover contribution. Commit totals alone do not establish contribution.
+1. A single row for every eligible LA/phase has a three-period persistence outcome and an explicit coverage reason.
+2. Every locally stated FSM/SEN gap cites matching period, phase, geography and comparator.
+3. Every proposed support investigation names the Attendance or Inclusion Lead and evidence needed before contacting schools.
 
-## Evidence rules
-
-D1–D12 and AC1–AC12 need direct artefact/test links. Store outputs separately from raw inputs and preserve a manifest. Do not claim a freeze without actual checksums and source validation. Keep every manual adjustment in code or an auditable transformation record. Never commit credentials, prohibited personal data or confidential materials.
-
-## Domain review requirements
-
-- Aggregate published statistics cannot identify individual pupils or establish why they are absent.
-- Do not join national characteristic rates onto local authorities as if locally measured.
-- Preserve suppression markers and pandemic/reporting discontinuities; do not convert suppressed cells to zero.
-
-Include the four mandatory domain tests and at least six additional meaningful scenarios. A second member must verify the core rerun and five headline BI measures. Record any unavailable metric or approved scope change visibly.
+Keep actual source support and mandatory blockers visible. Preserve raw/curated separation, manifests and every manual adjustment in code or an auditable record. Never commit credentials, prohibited personal information or invented approvals. Retain the simulated-client declaration in public descriptions.

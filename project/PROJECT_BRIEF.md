@@ -1,66 +1,68 @@
 # MTL-XF-021 — Project brief
 
-## Engagement
+This is a **simulated confidential-client engagement using official public/open data**. Client and stakeholder role labels describe a fictional engagement; do not claim a real external Mettelo customer, employment, endorsement or privileged data access. No raw data is uploaded by this specification update.
 
-This is a **simulated confidential-client engagement** using official public/open data. The client label is fictional and intentionally anonymous. Do not imply a real external Mettelo customer, employment by that client, privileged access or confidential source data. Public source statistics remain public; the engagement framing does not make them confidential.
+**Client:** Confidential Regional Education & Attendance Directorate. **Decision owner:** Director of Education & Inclusion. **Team:** 6–8. **Duration:** 8 weeks. **Review:** termly attendance and inclusion review.
 
-**Simulated sponsor:** Confidential Regional Education & Attendance Directorate. **Duration:** 8 weeks. **Team:** 6–8 members. **Track:** Cross-Functional. **Sector:** Education / Local Government.
+## Business problem and commission
 
-## Commission
+Attendance-support requests compete for a limited review team. A high persistent-absence rate in a small population and a large absent-enrolment count in a larger authority create different workloads, but the directorate's separate phase and characteristics reports do not make that distinction easy to discuss. A single headline ranking can therefore obscure whether the next task is phase-wide support, a subgroup inclusion review or a check on data comparability.
 
-Which local-authority and school-phase combinations warrant attendance-support investigation first, and which pupil-group disparities require a separate policy review?
+> Which local-authority and school-phase combinations warrant attendance-support investigation first, and which pupil-group disparities require a separate policy review?
 
-**School Attendance, Persistent Absence & Early Intervention Intelligence.** A regional education directorate needs to understand where persistent absence is becoming structural, which phases and pupil groups are most affected, and where limited attendance-support resources should be investigated first. The finished product will support termly attendance reviews and intervention prioritisation rather than simply ranking local authorities.
+## Core deliverable boundary
 
-## Outcomes and boundaries
+England LA/phase attendance assessment using the two agreed DfE files. Main comparisons use autumn-and-spring combined windows, with recent persistence based on 2023/24, 2024/25 and 2025/26 where all are present. Retain earlier observations as context, with methodological breaks flagged. Compare FSM/SEN groups within supported local/phase cells; never combine overlapping characteristic families.
 
-- Separate persistent absence from overall absence and show rate alongside burden for each eligible LA/phase.
-- Produce a three-period persistence assessment and a separate pupil-characteristics disparity analysis; disclose when characteristics are national rather than local.
-- Create an investigation shortlist of up to ten LA/phase combinations; compare rate-first and burden-first scenarios and explain membership changes.
+**Optional / out of core:** School-level casework, pupil risk prediction and intervention-effect estimates are outside core. Additional single-term/full-year files require separate registration; they cannot be substituted into the combined-term series.
 
-Deliver evidence for a management investigation decision, with an auditable shortlist of up to ten cases and at least two alternative prioritisation scenarios. Do not manufacture a full shortlist where the data supports fewer cases. Findings may conclude that evidence is insufficient.
+File availability does not prove dimensional support. Before analytical build, the team completes the source→field→metric→deliverable matrix in [data guidance](../data/README.md). Missing mandatory support blocks the gate and requires an approved official replacement or scope decision.
 
-**Data boundary:** Use both agreed DfE CSVs. Retain the published 2016/17–2025/26 coverage, then compare only matching reporting windows, school phases and geographic levels. Lock the actual release and available periods after inspecting metadata; a partial academic year must never be labelled a full year.
+## Analytical model
 
-**Model boundary:** Geographic fact: reporting period × period coverage × geography level/code × school phase × other published breakdowns. Characteristics fact: period × available geography × phase × characteristic type/value. Keep the two facts separate unless their dimensional coverage supports an explicit join.
+Geographic fact: reporting period × period coverage × geography level/code × school phase × other published breakdowns. Characteristics fact: period × available geography × phase × characteristic type/value. Keep the two facts separate unless their dimensional coverage supports an explicit join.
 
-**Out of scope:** real operational deployment, confidential case-level data, guaranteed savings/outcome improvements, paid-source dependencies and automatic allocation of services or funding. Optional modelling or enriched sources must not delay or replace the core D1–D12 pack.
+The source contract above controls where a general grain description is conditional. Do not create dimensions absent from the approved input.
 
-## Users and acceptance owners
+## Objectives
 
-- Simulated sponsor/review panel: approves commissioned question, changes and final investigation recommendation.
-- Domain service/planning user: checks whether diagnostic evidence supports the proposed review action.
-- Data steward: verifies source/version, licence, definitions, quality and retention evidence.
-- BI user: tests overview, drill-down, filters and limitations.
-- Independent reviewer: verifies calculations, rerun and requirement-to-test traceability.
+1. A single row for every eligible LA/phase has a three-period persistence outcome and an explicit coverage reason.
+2. Every locally stated FSM/SEN gap cites matching period, phase, geography and comparator.
+3. Every proposed support investigation names the Attendance or Inclusion Lead and evidence needed before contacting schools.
 
-These are simulated stakeholder roles, not claims of access to a real organisation.
+## Business questions
 
-## Work allocation
+1. Where has persistent absence remained high across at least three comparable periods?
+2. Which phases contribute the largest absence burden within each authority?
+3. Which pupil groups show the largest percentage-point gaps against their valid comparator?
+4. Does the shortlist change when burden replaces rate, or when incomplete periods are excluded?
+5. What school-level and qualitative evidence is needed before an intervention is commissioned?
 
-| Accountable role | Project responsibility and evidence |
+## Cross-functional delivery model
+
+| Delivery role | Required project contribution |
 | --- | --- |
-| Business Analyst / Delivery Lead | Own the commissioned decision for Confidential Regional Education & Attendance Directorate; record at least eight prioritised requirements, each linked to a deliverable and test; maintain weekly scope and decision logs. |
-| Data Governance Analyst | Register every 021 input and critical field; approve the frozen cohort, licence evidence, glossary and 100% headline-KPI lineage before analysis. |
-| Data Engineer | Implement the stated 021 analytical grain, ingestion and exclusions; deliver a clean rerun with row-count/checksum evidence and no unexplained key duplicates. |
-| BI Developer | Build executive, diagnostic and quality views for the commissioned decision; reconcile at least five 021 dashboard measures and test every visible filter. |
+| Business Analyst / Delivery Lead | Map the termly attendance and inclusion review, document eight prioritised user requirements and maintain requirement→deliverable→test links; Director of Education & Inclusion owns business approval. |
+| Data Governance Analyst | Own the MTL-XF-021 source/metadata register, cohort decision, licence evidence and 100% headline-measure lineage; resolve the specific risk: Combining period types, phases or overlapping characteristic groups would produce a plausible but invalid area ranking. |
+| Data Engineer | Implement the declared facts, keys, hierarchy and join controls; account for every source row and deliver a second-member reproducible run at the chosen MTL-XF-021 scope. |
+| BI Developer | Implement the termly attendance and inclusion review overview, diagnostic and quality pages; reconcile five measures and ensure cohort/extension warnings survive filters and export. |
 | Education / Attendance Analyst | Own phase and reporting-window comparability; review all seven KPI definitions and the three-period persistence results. |
 | Policy & Early Intervention Analyst | Write the up-to-ten-area investigation plan, naming support options, evidence gaps and a review owner for each. |
 | Education Assurance Analyst | Independently reconcile five source measures and execute the four attendance-specific edge cases. |
 
-At kickoff, replace role ownership with named team members and record review partners in `CONTRIBUTIONS.md`. Multiple roles per member are permitted, but critical calculations need a reviewer distinct from their author.
+Assign named team members and review partners at kickoff; roles may be combined, but a distinct member must review critical calculations and perform the final clean rerun. The executive and operational stakeholder roles are specified in [business context](BUSINESS_CONTEXT.md).
 
-## Working stages
+## Required investigation approach
 
-1. Week 1: agree at least eight requirements and define expected decisions.
-2. Week 2: inspect actual file schemas, establish available coverage and approve cohort freeze.
-3. Week 3: implement and reconcile analytical facts, keys and exclusions.
-4. Week 4: approve the 7-measure KPI catalogue and denominator rules.
-5. Week 5: complete five supported findings and domain comparisons.
-6. Week 6: compare two decision scenarios, produce the investigation shortlist and BI draft.
-7. Week 7: execute ten or more assurance/UAT scenarios, including project-specific edge cases.
-8. Week 8: independent rerun, executive briefing, presentation and final handover.
+Baseline: eligible LA/phase cells with three comparable observations, valid enrolment denominators and no suppressed component; flag persistent-absence rates above the same-phase England reference in all three periods. Order flagged cases by latest persistent-absence rate. Alternative: order the same eligible cases by published persistent-absence enrolment burden. Show both shortlists, changes and reasons; low or missing coverage goes to data review rather than a zero score.
 
-## Sign-off
+## Milestones and acceptance
 
-Follow [D1–D12](DELIVERABLES.md) and [AC1–AC12](ACCEPTANCE_CRITERIA.md). Approve only with reproducible evidence, no unresolved critical/high defects and transparent conditional-data limitations. A change in source availability must be logged; do not silently substitute a newer release.
+| Gate | Reviewers | Evidence / decision |
+| --- | --- | --- |
+| G1 — scope/source, end Week 2 | Business Analyst + Data Governance Analyst + domain specialist | Approve actual period, geography, grain, required input and field support in a source-to-deliverable matrix. Documentation verified; direct CSV payload, complete cross-tab availability, licence notices, exact bytes and freeze approval pending. Unsupported mandatory outputs remain blocked, not quietly reclassified as completed. |
+| G2 — model/metrics, end Week 4 | Data Engineer + domain specialist + independent reviewer | Approve row accounting, keys, hierarchy, join cardinality, five source reconciliations and all core metric definitions. |
+| G3 — analytical decision review, end Week 6 | Director of Education & Inclusion + operational stakeholders | Baseline: eligible LA/phase cells with three comparable observations, valid enrolment denominators and no suppressed component; flag persistent-absence rates above the same-phase England reference in all three periods. Order flagged cases by latest persistent-absence rate. Alternative: order the same eligible cases by published persistent-absence enrolment burden. Show both shortlists, changes and reasons; low or missing coverage goes to data review rather than a zero score. Retain an evidence-insufficient case and a manual review route. |
+| G4 — release, end Week 8 | Simulated Mettelo panel + independent reviewer | Accept D1–D12 only after ten executed domain tests, five BI reconciliations, clean rerun evidence and resolution of all critical/high defects. |
+
+D1–D12 are defined in [deliverables](DELIVERABLES.md). AC1–AC12 and DT1–DT10 are defined in [acceptance criteria](ACCEPTANCE_CRITERIA.md). No real production deployment, automatic funding/service allocation, private-client data or paid-source dependency is required.

@@ -1,58 +1,82 @@
 # MTL-XF-021 — Business context
 
-## Organisation and pressure
+## Organisation and decision owner
 
-**School Attendance, Persistent Absence & Early Intervention Intelligence.** A regional education directorate needs to understand where persistent absence is becoming structural, which phases and pupil groups are most affected, and where limited attendance-support resources should be investigated first. The finished product will support termly attendance reviews and intervention prioritisation rather than simply ranking local authorities.
+**Simulated client:** Confidential Regional Education & Attendance Directorate. **Accountable executive:** Director of Education & Inclusion. **Review cadence:** termly attendance and inclusion review.
 
-The simulated sponsor, Confidential Regional Education & Attendance Directorate, must decide where to direct limited analytical and service-review attention. Its starting problem is an inconsistent view of school attendance, persistent absence & early intervention intelligence: totals, rates, periods and categories can lead users to different conclusions without a common definition. The engagement supplies an evidence base; it does not assume the client has already suffered a quantified failure.
+This fictional directorate/board is an engagement scenario, not an assertion of a real client's circumstances. The source data remains official public/open data.
 
-## Current process and its consequences
+## Business problem
 
-Analysts retrieve official tables independently, prepare local summaries and discuss headline differences in management meetings. Without a shared cohort and definition register, revisions, incomparable denominators and missing coverage can pass into recommendations. The consequence is an investigation shortlist that cannot be explained or reproduced, rather than a verified estimate of financial loss.
+Attendance-support requests compete for a limited review team. A high persistent-absence rate in a small population and a large absent-enrolment count in a larger authority create different workloads, but the directorate's separate phase and characteristics reports do not make that distinction easy to discuss. A single headline ranking can therefore obscure whether the next task is phase-wide support, a subgroup inclusion review or a check on data comparability.
 
-## Required decision process
+## Why the current process is insufficient
 
-1. Confirm the reporting cohort and available dimensions.
-2. Review governed metrics and quality exceptions before interpreting patterns.
-3. Compare like-for-like trends and segment evidence against the questions below.
-4. Challenge at least two prioritisation scenarios and document changes in shortlisted cases.
-5. Assign a responsible role, evidence-gathering action and review point to every proposed investigation.
+The current scenario relies on separately prepared reports without a common source/metric contract. The material failure to prevent is specific: Combining period types, phases or overlapping characteristic groups would produce a plausible but invalid area ranking.
 
-**Decision:** Which local-authority and school-phase combinations warrant attendance-support investigation first, and which pupil-group disparities require a separate policy review?
+This creates uncertainty over which cases need investigation and which comparisons should be rejected. No quantified loss, backlog, budget deficit or service failure is invented as a client fact.
 
-## Business questions and evidence
+## Stakeholders and decisions
 
-| Question | Expected evidence |
+| Simulated stakeholder | Decision / review responsibility |
 | --- | --- |
-| Where has persistent absence remained high across at least three comparable periods? | Reconciled trend/segment table and diagnostic chart with period, grain, denominator and source references. |
-| Which phases contribute the largest absence burden within each authority? | Reconciled trend/segment table and diagnostic chart with period, grain, denominator and source references. |
-| Which pupil groups show the largest percentage-point gaps against their valid comparator? | Segment or coverage assessment stating which comparisons are supported. |
-| Does the shortlist change when burden replaces rate, or when incomplete periods are excluded? | Sensitivity or scope audit showing what changes the interpretation. |
-| What school-level and qualitative evidence is needed before an intervention is commissioned? | Investigation plan with missing evidence, owner and decision-review trigger. |
+| Director of Education & Inclusion | Accountable for scope, investigation priorities, accepted limitations and final business sign-off. |
+| Head of Attendance Support | Select LA/phase cases for investigation and assign support leads. |
+| SEND & Inclusion Lead | Challenge whether subgroup disparities reflect valid local evidence and identify additional context. |
+| School Improvement Lead | Translate area signals into a school-engagement evidence request without identifying pupils. |
+| Education Data Steward | Approve enrolment/session definitions, phase coverage and reporting breaks. |
 
-## Intended management use
+## Commissioned decision
+
+Which local-authority and school-phase combinations warrant attendance-support investigation first, and which pupil-group disparities require a separate policy review?
+
+## Practical management use case
+
+At the termly review, the Director selects an LA/secondary-phase signal, checks three comparable combined-term observations, then inspects FSM or SEN comparisons at the same available grain. If a subgroup cell is suppressed or not locally reported, the product opens an evidence request rather than assigning a local disparity. The Attendance Lead leaves with a review owner and a question for school partners, not a list of individual children.
+
+## Current-to-target workflow
+
+1. **Before review:** analyst registers the approved files, coverage and definitions; steward checks the cohort and unresolved exceptions.
+2. **At review:** Director of Education & Inclusion opens the overview, then inspects diagnostics and the underlying eligible population before considering a case.
+3. **Challenge:** the relevant stakeholder compares the alternative scenario and asks whether the signal survives missingness, comparability and denominator checks.
+4. **Action:** each accepted case records investigation type, responsible service role, missing evidence, next review and what finding would reverse the recommendation.
+5. **Follow-up:** the next termly attendance and inclusion review records evidence received and the decision, without claiming the analytical signal itself caused an improvement.
+
+## Required analytical response
 
 - Separate persistent absence from overall absence and show rate alongside burden for each eligible LA/phase.
 - Produce a three-period persistence assessment and a separate pupil-characteristics disparity analysis; disclose when characteristics are national rather than local.
 - Create an investigation shortlist of up to ten LA/phase combinations; compare rate-first and burden-first scenarios and explain membership changes.
 
-The BI executive view starts with the commissioned question, reporting period and coverage. Users inspect a diagnostic view before reading the investigation shortlist. Every case records the signal, its magnitude, uncertainty, alternative explanations, evidence still needed and a next-step owner. The final briefing must explain at least one case where the evidence is insufficient for action.
+## Measurable project outcomes
 
-## Measures of project value
+1. A single row for every eligible LA/phase has a three-period persistence outcome and an explicit coverage reason.
+2. Every locally stated FSM/SEN gap cites matching period, phase, geography and comparator.
+3. Every proposed support investigation names the Attendance or Inclusion Lead and evidence needed before contacting schools.
 
-Success means a repeatable review with five supported findings, five reconciled dashboard measures, two compared decision scenarios, ten UAT scenarios and a reproducible handover. Teams may propose a future operational baseline and improvement target, but must label these as proposed measures rather than achieved benefits. No observed savings or service improvement can be claimed from this simulated engagement alone.
+## Proposed benefit monitoring
 
-## Interpretation and evidence limits
+At kickoff, record a baseline review process and propose measures for: time to regenerate the agreed evidence pack; proportion of agenda recommendations with a complete evidence chain; and proportion of accepted investigations with a role owner and next review. The target for recommendation traceability and ownership is 100%; regeneration time is measured during the independent rerun, with no fabricated pre-project baseline or claimed reduction. These are proposed management measures, not achieved service benefits.
+
+## Scope and evidence limits
+
+**Core:** England LA/phase attendance assessment using the two agreed DfE files. Main comparisons use autumn-and-spring combined windows, with recent persistence based on 2023/24, 2024/25 and 2025/26 where all are present. Retain earlier observations as context, with methodological breaks flagged. Compare FSM/SEN groups within supported local/phase cells; never combine overlapping characteristic families.
+
+**Extensions:** School-level casework, pupil risk prediction and intervention-effect estimates are outside core. Additional single-term/full-year files require separate registration; they cannot be substituted into the combined-term series.
 
 - Aggregate published statistics cannot identify individual pupils or establish why they are absent.
 - Do not join national characteristic rates onto local authorities as if locally measured.
 - Preserve suppression markers and pandemic/reporting discontinuities; do not convert suppressed cells to zero.
 
-## Dependencies and risks
+## Risks, mitigations and escalation
 
-- Source/schema validation may narrow the scope: record an explicit impact decision rather than inventing fields.
-- Data revisions may alter findings: preserve immutable source manifests and rerun comparisons.
-- Small, suppressed or non-comparable segments may distort ordering: apply eligibility rules and show excluded cases.
-- Local context or operational records may be missing: attach an evidence request to the relevant recommendation.
+- **Interpretation risk:** Combining period types, phases or overlapping characteristic groups would produce a plausible but invalid area ranking. The domain specialist reviews definitions and DT1–DT10 before sign-off.
+- **Source risk:** Documentation verified; direct CSV payload, complete cross-tab availability, licence notices, exact bytes and freeze approval pending. The steward records unresolved items at G1; mandatory gaps block dependent outputs.
+- **Decision risk:** prioritisation assumptions may affect which cases appear. Show alternative scenarios, excluded cases and evidence that could change a recommendation.
+- **Delivery risk:** limited time or skills can leave undocumented manual steps. Assign a second-member rerun and retain contribution/review evidence throughout the eight weeks.
 
-The domain roles in [the brief](PROJECT_BRIEF.md) own interpretation; the simulated review panel owns decisions.
+## Evidence chain
+
+Stakeholder requirement → registered source and valid cohort → governed field/metric → tested transformation → reconciled finding → scenario reason code → investigation owner/evidence request → simulated UAT and sign-off.
+
+Every major recommendation must be traceable through this chain.

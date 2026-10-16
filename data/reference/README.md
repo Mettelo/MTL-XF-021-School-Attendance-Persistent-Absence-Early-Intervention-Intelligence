@@ -1,23 +1,9 @@
-# MTL-XF-021 — Reference data and mappings
+# MTL-XF-021 — Reference mappings
 
-## Purpose
+References support the approved [model and cohort](../README.md). Do not assume a mapping exists solely because entity names look similar.
 
-Maintain the code lists and crosswalks needed to implement this analytical grain:
+Required acquisition checks: Candidate raw fields confirmed in the catalogue preview include time_period, time_identifier, geographic_level, new_la_code, education_phase, enrolments, sess_possible, sess_overall, enrolments_pa_10_exact and their published percentages. The characteristics fact adds characteristic and characteristic_breakdown. Preserve x/z and any other nonnumeric markers separately.
 
-Geographic fact: reporting period × period coverage × geography level/code × school phase × other published breakdowns. Characteristics fact: period × available geography × phase × characteristic type/value. Keep the two facts separate unless their dimensional coverage supports an explicit join.
+For each mapping record source/version, licence, key, definition, valid dates, uniqueness, relationship cardinality, unmatched coverage and responsible domain steward. Quantify every unmapped category/entity. Keep totals distinct from components and do not multiply fact rows through many-to-many crosswalks.
 
-Potential references are the publisher's geography/entity identifiers, category hierarchies, period definitions, units, status codes and revision markers. Include only references actually needed by the model. Register any separately downloaded official file as an additional source.
-
-## Required mapping evidence
-
-Each reference needs source/version, licence, valid-from/to dates, key uniqueness, allowed values, business meaning, owner and transformation use. For each crosswalk record source key, target key, relationship cardinality, rationale and treatment of unmapped or changed entities. Quantify 100% of unmatched keys; do not silently drop them or infer a mapping from similar names.
-
-Avoid multiplying facts when a reference is many-to-many. Keep parent totals distinct from child categories. Non-official analyst-created groupings must be labelled as project assumptions and sensitivity-tested where they affect the investigation shortlist.
-
-## Domain constraints
-
-- Aggregate published statistics cannot identify individual pupils or establish why they are absent.
-- Do not join national characteristic rates onto local authorities as if locally measured.
-- Preserve suppression markers and pandemic/reporting discontinuities; do not convert suppressed cells to zero.
-
-The domain specialist approves category meaning and comparability. The Data Engineer supplies uniqueness, join-cardinality and coverage checks before the reference enters the curated model.
+Analyst-created groupings and eligibility thresholds are labelled project assumptions. If they affect case selection, show their effect in [the scenario comparison](../../project/ACCEPTANCE_CRITERIA.md). Candidate raw field names or download references in the source register still require actual version validation.
